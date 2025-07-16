@@ -1,0 +1,5 @@
+ ERROR 
+
+failed to connect to Redis server at localhost:6379: connection timeout after 5 seconds.
+
+Try --help for usage.

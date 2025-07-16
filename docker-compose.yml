@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  redis-source:
+    image: redis:7.2-alpine
+    container_name: redis-source
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes
+
+  redis-dest:
+    image: redis:7.2-alpine
+    container_name: redis-dest
+    ports:
+      - "6380:6379"
+    command: redis-server --appendonly yes
+

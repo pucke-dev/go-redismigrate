@@ -1,0 +1,5 @@
+Mode: move | Pattern: session:* | Conflict: skip
+Source: redis://source.example.com:6379/2
+Destination: redis://dest.example.com:6379/3
+Total: 1000 | Processed: 750 | Success: 700 | Failed: 25 | Skipped: 15
+Rate: 2.5 keys/sec | Elapsed: 5m0s

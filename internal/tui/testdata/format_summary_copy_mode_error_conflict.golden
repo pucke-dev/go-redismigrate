@@ -1,0 +1,5 @@
+Mode: copy | Pattern: user:* | Conflict: error
+Source: redis://localhost:6379/0
+Destination: redis://localhost:6379/1
+Total: 1000 | Processed: 750 | Success: 700 | Failed: 25
+Rate: 2.5 keys/sec | Elapsed: 5m0s

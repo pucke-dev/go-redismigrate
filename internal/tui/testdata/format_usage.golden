@@ -1,0 +1,41 @@
+Redis Migration Tool
+
+Migrate Redis keys between instances with real-time progress monitoring
+
+      
+Usage: redismigrate [options]
+
+        
+Options:
+  --source       Source Redis connection string  REQUIRED 
+  --dest         Destination Redis connection string  REQUIRED 
+  --pattern      Key pattern to match (Redis glob pattern) (default: *)
+  --mode         Migration mode (default: copy)
+  --conflict     Key conflict behavior (default: error)
+  --batch-size   Number of keys to process in each batch (default: 100)
+  --concurrency  Number of concurrent workers (default: 4)
+  --verbose      Enable verbose logging (default: false)
+  --version      Show version information
+  --help         Show this help message
+
+         
+Examples:
+  Basic copy migration:
+   redismigrate -source redis://localhost:6379/0 -dest redis://localhost:6379/1 
+
+  Move specific pattern:
+   redismigrate -source redis://src:6379/0 -dest redis://dst:6379/0 -pattern "user:*" -mode move 
+
+  High throughput with custom batch size:
+   redismigrate -source redis://src:6379/0 -dest redis://dst:6379/0 -batch-size 500 -concurrency 8 
+
+             
+Mode Options:
+  copy      Copy keys to destination (keeps source)
+  move      Move keys to destination (removes from source)
+
+                 
+Conflict Options:
+  error     Stop migration on key conflicts
+  skip      Skip conflicting keys
+  overwrite Overwrite existing keys

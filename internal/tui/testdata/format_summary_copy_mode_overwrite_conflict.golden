@@ -1,0 +1,5 @@
+Mode: copy | Pattern: cache:* | Conflict: overwrite
+Source: redis://10.0.1.100:6379/0
+Destination: redis://10.0.1.200:6379/0
+Total: 1000 | Processed: 750 | Success: 700 | Failed: 25 | Overwritten: 10
+Rate: 2.5 keys/sec | Elapsed: 5m0s
