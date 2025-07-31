@@ -1,5 +1,9 @@
 
 <div align="center">
+  <img src="https://vhs.charm.sh/vhs-1JVOq5s5ntrMCrMHLEyHhb.gif" alt="Made with VHS">
+  <a href="https://vhs.charm.sh">
+    <img src="https://stuff.charm.sh/vhs/badge.svg">
+  </a>
 
 # go-redismigrate
 
